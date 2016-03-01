@@ -1,2 +1,2 @@
 # LilyChurchHome
-The homepage of Lily church made a reponsive web. 
+The homepage of Lily church which is implemented a reponsive web. 

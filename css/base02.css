@@ -1,0 +1,329 @@
+@charset "utf-8";
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_
+ 모든 디바이스 공통 스타일과 스마트 폰 및 소형 태블릿 대상 레이아웃 지정
+/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_*/
+
+/*=============================================
+body
+===============================================*/
+body {
+	width: 100%;
+	background-color: #fff;
+	font-family: "돋움", "굴림", "Malgu Gothic", "Times New Roman",
+					 Dotum, sans-serif;
+	color: #000;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+/*=====================================================
+헤더 스타일
+=====================================================*/
+header {
+	text-align: center;
+	/*폭 768px 이하에서는 header 요소 내의 각 요소를 가운데 정렬로 배치합니다.*/
+}
+header h1 {
+	margin: 0 auto;
+	padding: 15px 5px 7px 5px;
+	width: 90%;
+}
+header h1 img {
+	width: 100%;/* 사이드 로고에 대해 필드 이미지를 설정합니다.*/
+	max-width: 265px;
+}
+
+/*#s_nav를 배치하기 위한 지정입니다.*/
+header {
+	position: relative;
+	overflow: hidden;
+}
+/*#s_nav의 각 요소를 가로로 배치합니다.*/
+header ul#s_nav {
+	margin-bottom: 15px;
+	position: relative;
+	left: 50%;
+	float: left;
+}
+header ul#s_nav li {
+	float: left;
+	position: relative;
+	left: -50%;
+}
+header ul#s_nav li a {
+	display: block;
+	font-size: 0.8em;
+	margin-right: 20px;
+	padding-left: 20px;
+}
+
+/*#s_nav의 각 요소 앞에 배치하는 아이콘 지정입니다.*/
+header ul#s_nav li.contact a {
+	background:url(../images/icn_contact.jpg)
+					no-repeat left center;
+}
+header ul#s_nav li.news a {
+	background:url(../images/icn_news.jpg)
+					no-repeat left center;
+}
+header ul#s_nav li.sitemap a {
+	background:url(../images/icn_sitemap.jpg)
+					no-repeat left center;
+}
+
+/* 메인 이미지 레이아웃을 지정합니다. */
+header p {
+	width: 100%;
+}
+header p img {
+	width: 100%;
+	height: auto;
+	max-width: 960px;
+}
+
+
+
+ol, ul {
+	list-style: none;
+}
+
+/* clearfix */
+.cf {
+	zoom: 1;
+}
+.cf:before, .cf:after {
+	content: "";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+
+
+/*=====================================================
+글로벌 네비게이션 스타일
+=====================================================*/
+nav ul {
+	margin-bottom: 15px;
+}
+nav ul li {
+	text-align: center;
+	float: left;
+	width: 100%;
+	border-bottom: 2px solid #000;
+}
+
+/* :nth-child()는 임의의 요소에 스타일을 적용하기 위한 모의 클래스임. 
+	odd를 지정하면 홀수 차례의 요소만이 이 스타일에 적용됨 */
+nav ul li:nth-child(odd) {
+	width: 99%;
+	border-right: 1px dotted #000;
+}
+nav ul li a {
+	display: block;
+	width: 100%;
+}
+
+
+/*=====================================================
+콘텐츠 영역 전체 스타일
+=====================================================*/
+/* 컨텐츠 영역 가장 아랫부분에 표시하는 나무 실루엣 이미지를 배치하고있습니다. */
+div#contents {
+	background: url(../images/bg_footer.jpg) no-repeat bottom;
+	padding-bottom: 90px;
+}
+
+
+/*=====================================================
+콘텐츠 영역 -> works 스타일
+=====================================================*/
+div#contents section#work h2 {
+	margin: 0 0 15px 5px;
+}
+div#contents section#work article {
+	text-align: center;
+	width: 50%; /*article 요소의 width에 50%를 지정해 2단 구성을 구현하고 있습니다.*/
+	min-width: 120px;
+	float: left;
+	margin-bottom: 30px;
+}
+
+div#contents section#work article img {
+	width: 100%;
+	height: auto;
+	max-width: 184px;
+}
+
+div#contents section#work article h3 {
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+div#contents section#work article p {
+	text-align: left;
+	font-size: 0.7em;
+	line-height: 2.0em;
+	padding: 0 15px;
+}
+
+
+
+/*=====================================================
+콘텐츠 영역 -> news 스타일
+=====================================================*/
+
+/*=====================================================
+콘텐츠 영역 -> information 스타일
+=====================================================*/
+
+/*=====================================================
+페이지 상단으로 가는 버튼 스타일
+=====================================================*/
+
+/*=====================================================
+푸터 스타일
+=====================================================*/
+
+
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_
+미디어 쿼리에 따른 전환
+/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_*/
+
+/* pc 대상 및 대형 태블릿 대상 레이아웃 지정 : 769~960px */
+@media only screen and (min-width: 769px) {
+	header {
+		position: static;
+		overflow: visible;
+	}
+
+	header h1 {
+		text-align: left;
+		padding: 15px 5px 7px 5px;
+		width: 280px;
+		float: left;
+	}
+
+	header h1 img {
+		width: 100%;
+	}
+
+/* #s_nav의 각 요소를 화면 좌측에 레이아웃합니다. */
+	header ul#s_nav {
+		float: right;
+		margin-top: 20px;
+		position: static;
+	}
+
+	header ul#s_nav li {
+		float: left;
+		position: static;
+	}
+
+	/* 글로벌 네비 */
+	/* 네비게이션 아래에 2중 괘선을 설정함. css에 정의된 cf 클래스 nav id 가진 태그에
+	    적용 안되있으면 위에 나타나거나 깨짐.
+	    또한 nav 요소 상하좌우에 여백을 설정합니다.  */
+	nav {
+		text-align: center;
+		border-bottom: 3px double #000;
+		margin: 10px auto 15px auto;
+	}
+	nav ul li {
+		text-align: center;
+		float: left;
+		width: 16%;
+		border-bottom: none;
+		border-right: 1px dotted #000;
+	}
+	/* 홀수 번째의 li 요소만 스타일을 적용하고 있습니다. */
+	nav ul li:nth-child(odd) {
+		width: 17%;
+		border-bottom: none;
+	}
+	nav ul li.home {
+		border-left: none;
+		margin-left: 1px;
+	}
+	nav ul li.contact {
+		border-right: none;
+	}
+	nav ul li a {
+		display: block;
+	}
+
+
+/*=====================================================
+콘텐츠 영역 -> works 스타일
+=====================================================*/
+div#contents section#work article {
+	width: 33%; /* 3단 구성 */
+}
+div#contents section#work article h3 {
+	line-height: 2.0em;
+}
+div#contents section#work article p {
+	font-size: 0.8em;
+	line-height: 2.0em;
+}
+
+
+}
+
+/* PC 대상 레이아웃 지정 : 961px 이상에서는 고정 레이아웃 */
+@media only screen and (min-width: 961px) {
+	
+	/* 폭 961px 이상의 경우는 header요소의 폭을 960px로 고정해 좌우의 여백을
+	 auto로 함. */
+	header {
+		width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+/* 글로벌 네비 */
+	nav {
+		max-width: 960px;
+	}
+	nav ul {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	nav ul li:nth-child(odd) {
+		border-bottom: none;
+	}
+
+	/* [Home] 좌측과 [Contact] 우측에 파선으로 된 괘선을 설정합니다. */
+	nav ul li.home {
+		border-left: 1px dotted #000;
+	}
+	nav ul li.contact {
+		border-right: 1px dotted #000;
+	}
+
+
+/*=====================================================
+콘텐츠 영역 -> works 스타일
+=====================================================*/
+div#contents {
+	max-width: 960px;
+	margin: 0 auto;
+}
+div#contents section#work article {
+	width: 20%; /* article 요소의 width 에 20%를 지정해 5단 구성을 구현하고 있음.*/
+}
+div#contents section#work article h3 {
+	line-height: 2.2em;
+}
+
+}

@@ -195,6 +195,24 @@ div#contents section#work article p {
 =====================================================*/
 
 
+/* 하단 메뉴바 */
+#btmnav {
+	position:fixed; bottom: 0; left:0;
+	width: 100%;
+	background-color: gray;
+ }
+
+.btn {
+width:25%;
+height:100px;
+background-color:gray;
+float: left;
+}
+#fixed1{background-color: red;border: none;}
+#fixed2{background-color: blue;border: none;}
+#fixed3{background-color: orange;border: none;}
+#fixed4{background-color: yellow;border: none;}
+
 
 /* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_
 미디어 쿼리에 따른 전환
@@ -234,7 +252,7 @@ div#contents section#work article p {
 	/* 네비게이션 아래에 2중 괘선을 설정함. css에 정의된 cf 클래스 nav id 가진 태그에
 	    적용 안되있으면 위에 나타나거나 깨짐.
 	    또한 nav 요소 상하좌우에 여백을 설정합니다.  */
-	nav {
+	nav#nav {
 		text-align: center;
 		border-bottom: 3px double #000;
 		margin: 10px auto 15px auto;
@@ -292,7 +310,7 @@ div#contents section#work article p {
 	}
 
 /* 글로벌 네비 */
-	nav {
+	nav#nav {
 		max-width: 960px;
 	}
 	nav ul {
